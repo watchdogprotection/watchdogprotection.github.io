@@ -26,6 +26,29 @@
             padding: 20px;
         }
 
+        /* TOP NAV */
+        .top-nav {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            display: flex;
+            gap: 25px;
+            z-index: 999;
+        }
+
+        .top-nav a {
+            color: #00FF88;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.15rem;
+            transition: 0.3s ease;
+        }
+
+        .top-nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #00FF88;
+        }
+
         /* Header */
         header {
             text-align: center;
@@ -297,6 +320,14 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            
+            .top-nav {
+                top: 15px;
+                right: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
             h1 {
                 font-size: 2rem;
             }
@@ -346,7 +377,16 @@
         }
     </style>
 </head>
+
 <body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="top-nav">
+        <a href="/">Home</a>
+        <a href="https://watchdogprotection.github.io/privacy">Privacy</a>
+        <a href="mailto:watchdog.protection.info@gmail.com">Contact Us</a>
+    </nav>
+
     <div class="container">
         <header>
             <div class="logo">
@@ -354,11 +394,14 @@
                     <img src="favicon.png" alt="Watchdog Logo" style="width: 120px; height: 120px; border-radius: 20px; cursor: pointer;">
                 </a>
             </div>
+
             <h1>Watchdog Protection</h1>
-                <p class="tagline">
-                    Turn your charger into a laptop lock. Secure it to the table so no thief can take your laptop.<br>
-                    If anyone unplugs it, your laptop alerts and you’ll instantly get a message on Telegram.
-                </p>            
+
+            <p class="tagline">
+                Turn your charger into a laptop lock. Secure it to the table so no thief can take your laptop.<br>
+                If anyone unplugs it, your laptop alerts and you’ll instantly get a message on Telegram.
+            </p>            
+
             <div class="cta-buttons">
                 <a href="https://github.com/watchdogprotection/watchdogprotection/releases/download/v1.0/Watchdog_Setup_v1.0.exe" class="btn btn-primary">
                     🪟 Download for Windows
@@ -460,10 +503,10 @@
             
             <div class="download-buttons">
                 <a href="https://github.com/watchdogprotection/watchdogprotection/releases/download/v1.0/Watchdog_Setup_v1.0.exe" class="btn btn-primary" style="font-size: 1.2rem; padding: 18px 50px;">
-                    🪟 Download for Windows
+                     Download for Windows
                 </a>
                 <span class="btn btn-disabled" style="font-size: 1.2rem; padding: 18px 50px;">
-                    🍎 macOS - Coming Soon
+                     macOS - Coming Soon
                 </span>
             </div>
 
