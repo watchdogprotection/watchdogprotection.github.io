@@ -18,7 +18,7 @@
             padding: 20px;
         }
 
-        /* === TOP NAVIGATION === */
+        /* TOP NAVIGATION */
         .top-nav {
             position: absolute;
             top: 20px;
@@ -43,10 +43,10 @@
             color: #00FF88;
         }
 
-        /* === MAIN CONTAINER === */
+        /* MAIN CONTAINER */
         .container {
             max-width: 900px;
-            margin: 80px auto 0 auto; /* Space to avoid overlapping header */
+            margin: 80px auto 0 auto;
             background: rgba(255,255,255,0.05);
             backdrop-filter: blur(10px);
             border-radius: 20px;
@@ -54,6 +54,7 @@
             border: 1px solid rgba(255,255,255,0.1);
         }
 
+        /* HEADING = SAME AS MAIN PAGE */
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
@@ -138,7 +139,7 @@
 
 <body>
 
-    <!-- TOP NAV BAR -->
+    <!-- TOP NAV -->
     <div class="top-nav">
         <a href="https://watchdogprotection.github.io">Home</a>
         <a href="https://watchdogprotection.github.io/privacy">Privacy</a>
@@ -178,174 +179,130 @@
                 </tr>
                 <tr>
                     <td><strong>Computer Name</strong></td>
-                    <td>The name of your computer (e.g., "John's Laptop")</td>
-                    <td>To show you which device sent the alert</td>
+                    <td>The name of your computer</td>
+                    <td>To show which device sent the alert</td>
                 </tr>
                 <tr>
                     <td><strong>Telegram Chat ID</strong></td>
-                    <td>Your Telegram account ID (number only, not username)</td>
-                    <td>To send you notifications</td>
+                    <td>Your Telegram numeric ID</td>
+                    <td>To send notifications</td>
                 </tr>
                 <tr>
                     <td><strong>Language Preference</strong></td>
-                    <td>Your preferred language (detected from Telegram)</td>
+                    <td>Your Telegram language code</td>
                     <td>To send alerts in your language</td>
                 </tr>
                 <tr>
                     <td><strong>Timestamps</strong></td>
-                    <td>When you registered and when alerts are sent</td>
-                    <td>For security and debugging purposes</td>
+                    <td>Registration and alert times</td>
+                    <td>For debugging and security</td>
                 </tr>
             </tbody>
         </table>
 
         <h3>1.2 What We DON'T Collect</h3>
         <ul>
-            <li>❌ Your name, email, or personal identity</li>
-            <li>❌ Your location or GPS data</li>
-            <li>❌ Files, photos, or documents on your computer</li>
-            <li>❌ Browsing history or web activity</li>
-            <li>❌ Passwords or sensitive credentials</li>
-            <li>❌ Screen recordings or screenshots</li>
-            <li>❌ Keystrokes or typed text</li>
+            <li>❌ Your name, email, personal identity</li>
+            <li>❌ Location / GPS</li>
+            <li>❌ Files, photos, or documents</li>
+            <li>❌ Browsing history</li>
+            <li>❌ Passwords</li>
+            <li>❌ Messages or screenshots</li>
+            <li>❌ Keystrokes</li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
-
-        <p>We use the collected data solely for:</p>
-
         <ol>
-            <li><strong>Sending Alerts:</strong> When your laptop is unplugged, we send you a Telegram notification</li>
-            <li><strong>Device Registration:</strong> Linking your device to your Telegram account securely</li>
-            <li><strong>Service Improvement:</strong> Debugging issues and improving app performance</li>
-            <li><strong>Security:</strong> Preventing unauthorized access and abuse</li>
+            <li>Sending unplug alerts</li>
+            <li>Device registration</li>
+            <li>Service improvement</li>
+            <li>Prevent abuse</li>
         </ol>
 
         <div class="warning-box">
-            <h3>⚠️ Important: No Third-Party Sharing</h3>
-            <p>We <strong>NEVER</strong> sell, rent, or share your data with third parties for marketing or advertising purposes. Your information stays with us and is used only for the Watchdog Protection service.</p>
+            <h3>⚠️ We Never Sell Your Data</h3>
+            <p>Your information is NEVER shared with third-party advertisers.</p>
         </div>
 
-        <h2>3. Data Storage and Security</h2>
+        <h2>3. Data Storage & Security</h2>
 
-        <h3>3.1 Where Your Data is Stored</h3>
+        <h3>3.1 Where Data Is Stored</h3>
         <ul>
-            <li><strong>Supabase (PostgreSQL Database):</strong> Stores device registrations and verification codes</li>
-            <li><strong>Railway.app:</strong> Hosts our API server (no permanent storage)</li>
-            <li><strong>Your Device:</strong> Settings and preferences stored locally</li>
+            <li>Supabase (PostgreSQL)</li>
+            <li>Railway.app server</li>
+            <li>Your device (local settings)</li>
         </ul>
 
-        <h3>3.2 Security Measures</h3>
+        <h3>3.2 Protection Measures</h3>
         <ul>
-            <li>✅ All API communications use HTTPS encryption</li>
-            <li>✅ Device IDs are hashed (SHA-256) for privacy</li>
-            <li>✅ Verification codes expire after 10 minutes</li>
-            <li>✅ Rate limiting prevents API abuse</li>
-            <li>✅ No payment information collected (app is 100% free)</li>
+            <li>All communication uses HTTPS</li>
+            <li>Device IDs are hashed</li>
+            <li>Verification codes expire in 10 minutes</li>
+            <li>Rate limiting enabled</li>
         </ul>
 
         <h2>4. Telegram Integration</h2>
-
-        <p>Watchdog uses Telegram's Bot API to send you notifications. When you register:</p>
-
         <ul>
-            <li>We only access your Telegram Chat ID (a number, not your username or phone)</li>
-            <li>We detect your language preference from Telegram settings</li>
-            <li>We cannot read your messages or access your contacts</li>
-            <li>You can unlink your device anytime using <code>/unregister</code> command</li>
+            <li>We only access Chat ID</li>
+            <li>We cannot read any messages</li>
+            <li>You can unregister anytime</li>
         </ul>
 
-        <p><strong>Telegram's Privacy Policy:</strong> <a href="https://telegram.org/privacy" target="_blank">https://telegram.org/privacy</a></p>
+        <p>Telegram Policy: <a href="https://telegram.org/privacy" target="_blank">https://telegram.org/privacy</a></p>
 
-        <h2>5. Your Rights and Control</h2>
-
-        <p>You have full control over your data:</p>
-
+        <h2>5. Your Rights</h2>
         <table class="data-table">
             <thead>
-                <tr>
-                    <th>Right</th>
-                    <th>How to Exercise It</th>
-                </tr>
+                <tr><th>Right</th><th>How</th></tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><strong>Access Your Data</strong></td>
-                    <td>Send <code>/status</code> command to our Telegram bot</td>
-                </tr>
-                <tr>
-                    <td><strong>Delete Your Data</strong></td>
-                    <td>Send <code>/unregister</code> command or use "Switch Account" in the app</td>
-                </tr>
-                <tr>
-                    <td><strong>Change Telegram Account</strong></td>
-                    <td>Click "Switch Account" in the Watchdog app</td>
-                </tr>
-                <tr>
-                    <td><strong>Stop Using the Service</strong></td>
-                    <td>Uninstall the app - all local data is removed</td>
-                </tr>
-                <tr>
-                    <td><strong>Request Data Export</strong></td>
-                    <td>Contact us at watchdog.protection.info@gmail.com</td>
-                </tr>
+                <tr><td>View Data</td><td>/status command</td></tr>
+                <tr><td>Delete Data</td><td>/unregister command</td></tr>
+                <tr><td>Switch Account</td><td>Use "Switch Account"</td></tr>
+                <tr><td>Stop Service</td><td>Uninstall the app</td></tr>
+                <tr><td>Export Data</td><td>Email us</td></tr>
             </tbody>
         </table>
 
         <h2>6. Data Retention</h2>
-
         <ul>
-            <li><strong>Active Registrations:</strong> Kept as long as you use the service</li>
-            <li><strong>Verification Codes:</strong> Automatically deleted after 10 minutes or after use</li>
-            <li><strong>Alert Logs:</strong> Not stored permanently</li>
-            <li><strong>After Unregistering:</strong> All your data is immediately deleted</li>
+            <li>Active devices: kept until unregistered</li>
+            <li>Verification codes: deleted after 10 minutes</li>
+            <li>Alert logs: not stored permanently</li>
+            <li>Unregistering removes all data</li>
         </ul>
 
         <h2>7. Children's Privacy</h2>
+        <p>Not intended for users under 13.</p>
 
-        <p>Watchdog Protection is not intended for children under 13. We do not knowingly collect data from children. If you believe we have collected information from a child, please contact us immediately.</p>
-
-        <h2>8. Changes to This Privacy Policy</h2>
-
-        <p>We may update this Privacy Policy occasionally. Changes will be posted on this page with an updated "Last Updated" date. Continued use of Watchdog after changes means you accept the updated policy.</p>
+        <h2>8. Policy Changes</h2>
+        <p>Updates will be posted here.</p>
 
         <h2>9. Third-Party Services</h2>
-
-        <p>Watchdog uses these third-party services:</p>
-
         <ul>
-            <li><strong>Telegram Bot API:</strong> For sending notifications</li>
-            <li><strong>Supabase:</strong> Database hosting</li>
-            <li><strong>Railway.app:</strong> Server hosting</li>
-            <li><strong>Microsoft Edge WebView2:</strong> For displaying app content</li>
+            <li>Telegram Bot API</li>
+            <li>Supabase</li>
+            <li>Railway.app</li>
         </ul>
 
         <h2>10. International Users</h2>
+        <p>Your data may be processed in other countries.</p>
 
-        <p>Your data may be processed in different countries. By using Watchdog, you consent to international data transfer.</p>
+        <h2>11. Cookies</h2>
+        <p>No cookies or tracking in the desktop app.</p>
 
-        <h2>11. Cookies and Tracking</h2>
-
-        <p><strong>No cookies or tracking are used in the Watchdog desktop app.</strong></p>
-
-        <h2>12. Open Source and Transparency</h2>
-
-        <ul>
-            <li>We only collect what is necessary</li>
-            <li>You can inspect network traffic</li>
-            <li>We are open about our practices</li>
-        </ul>
+        <h2>12. Transparency</h2>
+        <p>We collect only what is necessary.</p>
 
         <div class="highlight-box">
             <h3>🛡️ Your Privacy = Our Priority</h3>
-            <p>We built Watchdog to protect your laptop, not your data. You can delete everything any time.</p>
         </div>
 
         <div class="contact-section">
             <h3>Questions About Privacy?</h3>
             <p>
                 📧 Email: <a href="mailto:watchdog.protection.info@gmail.com">watchdog.protection.info@gmail.com</a><br>
-                💬 Telegram: <a href="https://t.me/watchdog_protection_bot" target="_blank">@watchdog_protection_bot</a><br>
+                💬 Telegram: <a href="https://t.me/watchdog_protection_bot">@watchdog_protection_bot</a><br>
                 🌐 Website: <a href="https://watchdogprotection.github.io">watchdogprotection.github.io</a>
             </p>
         </div>
@@ -354,8 +311,8 @@
 
         <p style="text-align:center;color:#888;font-size:0.9rem;">
             © 2025 Watchdog Protection. All rights reserved.<br>
-            <a href="https://watchdogprotection.github.io">Home</a> • 
-            <a href="https://watchdogprotection.github.io/privacy">Privacy Policy</a> • 
+            <a href="https://watchdogprotection.github.io">Home</a> •
+            <a href="https://watchdogprotection.github.io/privacy">Privacy Policy</a> •
             <a href="https://watchdogprotection.github.io/contact">Contact</a>
         </p>
 
