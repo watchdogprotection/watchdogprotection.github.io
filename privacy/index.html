@@ -6,12 +6,9 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Privacy Policy - Watchdog Protection</title>
     <meta name="description" content="Privacy Policy for Watchdog Protection anti-theft software">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -21,14 +18,40 @@
             padding: 20px;
         }
 
+        /* === TOP NAVIGATION === */
+        .top-nav {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .top-nav a {
+            color: #D6D6D6;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.08);
+            transition: 0.3s;
+        }
+
+        .top-nav a:hover {
+            background: rgba(255,255,255,0.18);
+            color: #00FF88;
+        }
+
+        /* === MAIN CONTAINER === */
         .container {
             max-width: 900px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
+            margin: 80px auto 0 auto; /* Space to avoid overlapping header */
+            background: rgba(255,255,255,0.05);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         h1 {
@@ -37,7 +60,6 @@
             background: linear-gradient(135deg, #00CC6A, #00FF88);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .last-updated {
@@ -45,52 +67,26 @@
             font-size: 0.9rem;
             margin-bottom: 40px;
             padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        h2 {
-            font-size: 1.8rem;
-            color: #00FF88;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
+        h2 { font-size: 1.8rem; color: #00FF88; margin-top: 40px; margin-bottom: 20px; }
+        h3 { font-size: 1.3rem; color: #00CC6A; margin-top: 30px; margin-bottom: 15px; }
 
-        h3 {
-            font-size: 1.3rem;
-            color: #00CC6A;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: #D6D6D6;
-        }
-
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            color: #D6D6D6;
-        }
+        p { margin-bottom: 15px; }
+        ul, ol { margin-left: 30px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
 
         .highlight-box {
-            background: rgba(0, 204, 106, 0.1);
+            background: rgba(0,204,106,0.1);
             border-left: 4px solid #00CC6A;
             padding: 20px;
             margin: 30px 0;
             border-radius: 10px;
         }
 
-        .highlight-box h3 {
-            margin-top: 0;
-        }
-
         .warning-box {
-            background: rgba(255, 165, 0, 0.1);
+            background: rgba(255,165,0,0.1);
             border-left: 4px solid #FFA500;
             padding: 20px;
             margin: 30px 0;
@@ -100,14 +96,14 @@
         .data-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0,0,0,0.2);
             border-radius: 10px;
             overflow: hidden;
+            margin: 20px 0;
         }
 
         .data-table th {
-            background: rgba(0, 204, 106, 0.2);
+            background: rgba(0,204,106,0.2);
             color: #00FF88;
             padding: 15px;
             text-align: left;
@@ -116,77 +112,40 @@
 
         .data-table td {
             padding: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
-        .data-table tr:hover {
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        a {
-            color: #00CC6A;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #00FF88;
-            text-decoration: underline;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .back-link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            text-decoration: none;
-        }
+        a { color: #00CC6A; text-decoration: none; transition: 0.3s; }
+        a:hover { color: #00FF88; }
 
         .contact-section {
-            background: rgba(0, 204, 106, 0.05);
+            background: rgba(0,204,106,0.05);
             padding: 30px;
             border-radius: 15px;
             margin-top: 40px;
             text-align: center;
         }
 
-        .contact-section h3 {
-            margin-top: 0;
-        }
+        hr { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 40px 0; }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            .data-table {
-                font-size: 0.9rem;
-            }
-
-            .data-table th,
-            .data-table td {
-                padding: 10px;
-            }
+        @media (max-width:768px){
+            .container { padding: 30px 20px; margin-top: 120px; }
+            .top-nav { right: 10px; gap: 10px; }
+            h1 { font-size: 2rem; }
         }
     </style>
 </head>
+
 <body>
+
+    <!-- TOP NAV BAR -->
+    <div class="top-nav">
+        <a href="https://watchdogprotection.github.io">Home</a>
+        <a href="https://watchdogprotection.github.io/privacy">Privacy</a>
+        <a href="https://watchdogprotection.github.io/contact">Contact Us</a>
+    </div>
+
     <div class="container">
-        <a href="https://watchdogprotection.github.io" class="back-link">← Back to Home</a>
 
         <h1>Privacy Policy</h1>
         <p class="last-updated">Last Updated: November 27, 2025</p>
@@ -328,7 +287,7 @@
                 </tr>
                 <tr>
                     <td><strong>Request Data Export</strong></td>
-                    <td>Contact us at <a href="mailto:watchdog.protection.info@gmail.com">watchdog.protection.info@gmail.com</a></td>
+                    <td>Contact us at watchdog.protection.info@gmail.com</td>
                 </tr>
             </tbody>
         </table>
@@ -338,8 +297,8 @@
         <ul>
             <li><strong>Active Registrations:</strong> Kept as long as you use the service</li>
             <li><strong>Verification Codes:</strong> Automatically deleted after 10 minutes or after use</li>
-            <li><strong>Alert Logs:</strong> Not stored permanently (sent in real-time only)</li>
-            <li><strong>After Unregistering:</strong> All your data is immediately deleted from our servers</li>
+            <li><strong>Alert Logs:</strong> Not stored permanently</li>
+            <li><strong>After Unregistering:</strong> All your data is immediately deleted</li>
         </ul>
 
         <h2>7. Children's Privacy</h2>
@@ -355,38 +314,35 @@
         <p>Watchdog uses these third-party services:</p>
 
         <ul>
-            <li><strong>Telegram Bot API:</strong> For sending notifications (<a href="https://telegram.org/privacy" target="_blank">Privacy Policy</a>)</li>
-            <li><strong>Supabase:</strong> Database hosting (<a href="https://supabase.com/privacy" target="_blank">Privacy Policy</a>)</li>
-            <li><strong>Railway.app:</strong> Server hosting (<a href="https://railway.app/legal/privacy" target="_blank">Privacy Policy</a>)</li>
-            <li><strong>Microsoft Edge WebView2:</strong> For displaying content in the app (<a href="https://privacy.microsoft.com/" target="_blank">Privacy Policy</a>)</li>
+            <li><strong>Telegram Bot API:</strong> For sending notifications</li>
+            <li><strong>Supabase:</strong> Database hosting</li>
+            <li><strong>Railway.app:</strong> Server hosting</li>
+            <li><strong>Microsoft Edge WebView2:</strong> For displaying app content</li>
         </ul>
 
         <h2>10. International Users</h2>
 
-        <p>Watchdog Protection is available worldwide. Your data may be stored and processed in different locations. By using our service, you consent to this international data transfer.</p>
+        <p>Your data may be processed in different countries. By using Watchdog, you consent to international data transfer.</p>
 
         <h2>11. Cookies and Tracking</h2>
 
-        <p><strong>We do NOT use cookies or tracking in the desktop app.</strong> Our website may use standard web analytics, but we don't track you across other websites.</p>
+        <p><strong>No cookies or tracking are used in the Watchdog desktop app.</strong></p>
 
         <h2>12. Open Source and Transparency</h2>
 
-        <p>We believe in transparency:</p>
-
         <ul>
-            <li>✅ This Privacy Policy explains everything we collect</li>
-            <li>✅ You can inspect network traffic to verify our claims</li>
-            <li>✅ We're happy to answer questions about our data practices</li>
+            <li>We only collect what is necessary</li>
+            <li>You can inspect network traffic</li>
+            <li>We are open about our practices</li>
         </ul>
 
         <div class="highlight-box">
             <h3>🛡️ Your Privacy = Our Priority</h3>
-            <p>We built Watchdog to protect your laptop, not to collect your data. We only store what's absolutely necessary to provide the service, and you can delete it anytime.</p>
+            <p>We built Watchdog to protect your laptop, not your data. You can delete everything any time.</p>
         </div>
 
         <div class="contact-section">
             <h3>Questions About Privacy?</h3>
-            <p>If you have questions or concerns about this Privacy Policy or how we handle your data, please contact us:</p>
             <p>
                 📧 Email: <a href="mailto:watchdog.protection.info@gmail.com">watchdog.protection.info@gmail.com</a><br>
                 💬 Telegram: <a href="https://t.me/watchdog_protection_bot" target="_blank">@watchdog_protection_bot</a><br>
@@ -394,14 +350,15 @@
             </p>
         </div>
 
-        <hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 40px 0;">
+        <hr>
 
-        <p style="text-align: center; color: #888; font-size: 0.9rem;">
+        <p style="text-align:center;color:#888;font-size:0.9rem;">
             © 2025 Watchdog Protection. All rights reserved.<br>
             <a href="https://watchdogprotection.github.io">Home</a> • 
             <a href="https://watchdogprotection.github.io/privacy">Privacy Policy</a> • 
-            <a href="mailto:watchdog.protection.info@gmail.com">Contact</a>
+            <a href="https://watchdogprotection.github.io/contact">Contact</a>
         </p>
+
     </div>
 </body>
 </html>
