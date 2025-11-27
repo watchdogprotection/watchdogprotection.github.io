@@ -97,6 +97,18 @@
             border-color: rgba(255, 255, 255, 0.5);
         }
 
+        .btn-disabled {
+            background: rgba(128, 128, 128, 0.3);
+            color: #888;
+            border: 2px solid rgba(128, 128, 128, 0.3);
+            cursor: not-allowed;
+        }
+
+        .btn-disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
         /* Features Section */
         .features {
             display: grid;
@@ -226,6 +238,14 @@
             margin-bottom: 40px;
         }
 
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
         .system-requirements {
             display: inline-block;
             background: rgba(0, 0, 0, 0.3);
@@ -298,6 +318,11 @@
             .features {
                 grid-template-columns: 1fr;
             }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         /* Alert Note */
@@ -334,8 +359,11 @@
             
             <div class="cta-buttons">
                 <a href="https://github.com/watchdogprotection/watchdogprotection/releases/download/v1.0/Watchdog_Setup_v1.0.exe" class="btn btn-primary">
-                    📥 Download Free (Windows) (v1.0)
+                    🪟 Download for Windows
                 </a>
+                <span class="btn btn-disabled">
+                    🍎 macOS - Coming Soon
+                </span>
                 <a href="#how-it-works" class="btn btn-secondary">
                     🎬 How It Works
                 </a>
@@ -428,18 +456,23 @@
             <h2>Ready to Protect Your Laptop?</h2>
             <p>Free download • No registration required • Works offline</p>
             
-            <a href="https://watchdogprotection.github.io/download" class="btn btn-primary" style="font-size: 1.2rem; padding: 18px 50px;">
-                📥 Download Watchdog v1.0 (Windows)
-            </a>
+            <div class="download-buttons">
+                <a href="https://github.com/watchdogprotection/watchdogprotection/releases/download/v1.0/Watchdog_Setup_v1.0.exe" class="btn btn-primary" style="font-size: 1.2rem; padding: 18px 50px;">
+                    🪟 Download for Windows
+                </a>
+                <span class="btn btn-disabled" style="font-size: 1.2rem; padding: 18px 50px;">
+                    🍎 macOS - Coming Soon
+                </span>
+            </div>
 
             <div class="system-requirements">
                 <h4>System Requirements:</h4>
                 <ul>
                     <li>Windows 10/11 (64-bit)</li>
-                    <li>macOS 10.15 or later</li>
+                    <li>macOS 10.15 or later (coming soon)</li>
                     <li>100 MB free disk space</li>
                     <li>Internet connection (for Telegram)</li>
-                    <li>Microsoft Edge WebView2 (auto-installs)</li>
+                    <li>Microsoft Edge WebView2 (Windows - auto-installs)</li>
                 </ul>
             </div>
         </section>
