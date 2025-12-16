@@ -95,7 +95,9 @@
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
         }
 
         .btn-primary {
@@ -107,6 +109,17 @@
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 12px 30px rgba(0, 204, 106, 0.4);
+        }
+
+        .btn-primary .btn-main-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .btn-primary .btn-sub-text {
+            font-size: 0.85rem;
+            font-weight: 400;
+            opacity: 0.8;
         }
 
         .btn-secondary {
@@ -404,18 +417,19 @@
 
             <div class="cta-buttons">
                 <a href="https://apps.microsoft.com/store/detail/9N7W2VB23HN1?cid=DevShareMTGPCS" class="btn btn-primary">
-                    🪟 Get from Microsoft Store
+                    <span class="btn-main-text">Get for Windows</span>
+                    <span class="btn-sub-text">From Microsoft Store</span>
                 </a>
                 <span class="btn btn-disabled">
-                    🍎 macOS - Coming Soon
+                    macOS - Coming Soon
                 </span>
                 <a href="#how-it-works" class="btn btn-secondary">
-                    🎬 How It Works
+                    How It Works
                 </a>
             </div>
 
             <div class="alert-note">
-                <h4>ℹ️ Available on Microsoft Store</h4>
+                <h4>Available on Microsoft Store</h4>
                 <p>Download safely from the official Microsoft Store. Verified by Microsoft for your security and peace of mind!</p>
             </div>
         </header>
@@ -503,10 +517,11 @@
             
             <div class="download-buttons">
                 <a href="https://apps.microsoft.com/store/detail/9N7W2VB23HN1?cid=DevShareMTGPCS" class="btn btn-primary" style="font-size: 1.2rem; padding: 18px 50px;">
-                    🛡️ Get from Microsoft Store
+                    <span class="btn-main-text">Get for Windows</span>
+                    <span class="btn-sub-text">From Microsoft Store</span>
                 </a>
                 <span class="btn btn-disabled" style="font-size: 1.2rem; padding: 18px 50px;">
-                    🍎 macOS - Coming Soon
+                    macOS - Coming Soon
                 </span>
             </div>
 
